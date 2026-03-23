@@ -56,7 +56,7 @@ class Bag(Generic[T]):
             return False
         else:
             if item in self._items:
-                self._items.pop(item)
+                self._items.remove(item)
                 return True
             else:
                 return False
@@ -76,4 +76,4 @@ class Bag(Generic[T]):
     
     
     def __repr__(self):
-        return super().__repr__()
+        return f"Bag (capacity = {self.capacity}, items = {len(self._items)})"
