@@ -137,7 +137,7 @@ class TestBag:
 # ══════════════════════════════════════════════════════════════════════════════
 # HERO CONSTRUCTOR TESTS
 # ══════════════════════════════════════════════════════════════════════════════
-'''
+
 class TestHeroConstructor:
     """Verify that the Hero is initialized with the correct defaults."""
 
@@ -251,7 +251,7 @@ class TestCombat:
 # ══════════════════════════════════════════════════════════════════════════════
 # WEAPON TESTS
 # ══════════════════════════════════════════════════════════════════════════════
-
+'''
 class TestWeapons:
     """Tests for equipping weapons and damage potential."""
 
