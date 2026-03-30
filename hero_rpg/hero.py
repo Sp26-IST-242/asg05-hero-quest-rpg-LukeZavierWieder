@@ -116,6 +116,10 @@ class Hero:
             True if equipped; False if weapon slots are full.
         """
         success: bool = self.equipped_weapons.add(weapon) # technical debt
+        if success:
+            self.combat_log.append(
+                f"{weapon} added to inventory"
+        )
         return success
         
 
