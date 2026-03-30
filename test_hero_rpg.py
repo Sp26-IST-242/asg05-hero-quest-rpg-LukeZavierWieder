@@ -286,7 +286,7 @@ class TestWeapons:
 # ══════════════════════════════════════════════════════════════════════════════
 # SKILL TESTS
 # ══════════════════════════════════════════════════════════════════════════════
-'''
+
 class TestSkills:
     """Tests verifying set behavior for skill learning."""
 
@@ -323,7 +323,7 @@ class TestSkills:
 # ══════════════════════════════════════════════════════════════════════════════
 # INVENTORY TESTS
 # ══════════════════════════════════════════════════════════════════════════════
-
+'''
 class TestInventory:
     """Tests for item pick-up and defaultdict grouping."""
 
