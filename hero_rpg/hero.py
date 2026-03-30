@@ -81,6 +81,10 @@ class Hero:
         """
         actual: int = min(self.health, amount)
         self.health -= actual
+        self.combat_log.append(
+            f"{self.name} took {actual} damage"
+            f"HP: {self.health}/{self.max_health}"
+        )
         return actual
 
     def heal(self, amount: int) -> int:
@@ -92,6 +96,10 @@ class Hero:
         """
         actual: int = min(self.max_health - self.health, amount)
         self.health += actual
+        self.combat_log.append(
+            f"{self.name} healed {actual} HP"
+            f"HP: {self.health}/{self.max_health}"
+        )
         return actual
 
     def is_alive(self) -> bool:
