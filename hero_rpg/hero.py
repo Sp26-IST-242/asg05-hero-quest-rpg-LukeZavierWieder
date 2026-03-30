@@ -121,7 +121,11 @@ class Hero:
                 f"{weapon} added to inventory"
         )
         return success
-        
+
+    def total_damage_potential(self) -> int:
+        """Sum damage of all currently equipped weapons."""
+        return sum(w.damage for w in self.equipped_weapons.all())
+    
 
     def learn_skill(self, skill: str) -> bool:
         """
@@ -130,7 +134,10 @@ class Hero:
         Returns:
             True if new skill; False if already known.
         """
-        pass
+        if skill in self.skills:
+            return False
+        self.skills.add(skill)
+        return True
 
     # ── Inventory ─────────────────────────────────────────────────────────────
 
@@ -159,10 +166,7 @@ class Hero:
         """
         pass
 
-    def total_damage_potential(self) -> int:
-        """Sum damage of all currently equipped weapons."""
-        return sum(w.damage for w in self.equipped_weapons.all())
-
+    
     def top_kills(self, n: int = 3) -> list[tuple[str, int]]:
         """
         Return the top N most-killed enemy types.
