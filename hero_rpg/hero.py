@@ -161,7 +161,7 @@ class Hero:
 
     def total_damage_potential(self) -> int:
         """Sum damage of all currently equipped weapons."""
-        pass
+        return sum(w.damage for w in self.equipped_weapons.all())
 
     def top_kills(self, n: int = 3) -> list[tuple[str, int]]:
         """
