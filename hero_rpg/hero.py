@@ -118,7 +118,7 @@ class Hero:
         success: bool = self.equipped_weapons.add(weapon) # technical debt
         if success:
             self.combat_log.append(
-                f"{weapon} added to inventory"
+                f"{self.name} equipped {weapon}"
         )
         return success
 
@@ -148,14 +148,21 @@ class Hero:
         Returns:
             True if added; False if inventory is full.
         """
-        pass
+        success: bool = self.inventory.add(item) # technical debt
+        if success:
+            self.combat_log.append(
+                f"{item} added to inventory"
+
+        )
+            self._item_registry[item.item_type].append(item)
+        return success
 
     def items_by_type(self) -> dict[str, list[Item]]:
         """
         Return items grouped by ItemType name as a plain dict copy.
         Callers cannot mutate the internal defaultdict directly.
         """
-        pass
+        
 
     # ── Combat & Kill Tracking ────────────────────────────────────────────────
 
