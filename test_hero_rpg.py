@@ -251,7 +251,7 @@ class TestCombat:
 # ══════════════════════════════════════════════════════════════════════════════
 # WEAPON TESTS
 # ══════════════════════════════════════════════════════════════════════════════
-'''
+
 class TestWeapons:
     """Tests for equipping weapons and damage potential."""
 
@@ -286,7 +286,7 @@ class TestWeapons:
 # ══════════════════════════════════════════════════════════════════════════════
 # SKILL TESTS
 # ══════════════════════════════════════════════════════════════════════════════
-
+'''
 class TestSkills:
     """Tests verifying set behavior for skill learning."""
 
