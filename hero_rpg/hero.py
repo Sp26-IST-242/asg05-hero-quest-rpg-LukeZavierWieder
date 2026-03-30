@@ -1,3 +1,4 @@
+
 """
 hero.py
 =======
@@ -31,8 +32,44 @@ class Hero:
     """
 
     def __init__(self, name: str, hero_class: str, max_health: int = 100) -> None:
-        pass
+    # ── Identity ────────────────────────────────────────────────────────────────
 
+        self.name: str = name
+        self.hero_class: str = hero_class
+        self.max_health: int = max_health
+        self.health: int = max_health
+
+    # ── Bag 1: potions, armor, etc ────────────────────────────────────────────────────────────────
+        self.inventory: Bag[Item] = Bag(capacity=20)
+
+    # ── Bag 2: only for weapons ────────────────────────────────────────────────────────────────
+        self.equipped_weapons: Bag[Weapon] = Bag(capacity=3)
+    
+    
+    # ── Skills ────────────────────────────────────────────────────────────────
+        self.skills: set[str] = set()
+
+    # ── Stats ────────────────────────────────────────────────────────────────
+        self.stats: dict[str, int] = {
+            "strength": 10,
+            "dexterity": 10,
+            "intelligence": 10,
+            "defense": 5,
+        }
+
+
+    # ── Kill Counter ────────────────────────────────────────────────────────────────
+        self.kill_counter: Counter[str] = Counter()
+
+
+    # ── Item Registry ────────────────────────────────────────────────────────────────
+        self._item_registry: defaultdict[str, list[Item]] = defaultdict(list)
+
+    
+    # ── Combat Log ────────────────────────────────────────────────────────────────
+        self.combat_log: deque[str] = deque(maxlen=10)
+    
+    
     # ── Health ────────────────────────────────────────────────────────────────
 
     def take_damage(self, amount: int) -> int:
