@@ -323,7 +323,7 @@ class TestSkills:
 # ══════════════════════════════════════════════════════════════════════════════
 # INVENTORY TESTS
 # ══════════════════════════════════════════════════════════════════════════════
-'''
+
 class TestInventory:
     """Tests for item pick-up and defaultdict grouping."""
 
@@ -370,7 +370,7 @@ class TestInventory:
 # ══════════════════════════════════════════════════════════════════════════════
 # KILL COUNTER TESTS
 # ══════════════════════════════════════════════════════════════════════════════
-
+'''
 class TestKillCounter:
     """Tests for Counter-based kill tracking."""
 
