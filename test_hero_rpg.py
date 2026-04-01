@@ -370,7 +370,7 @@ class TestInventory:
 # ══════════════════════════════════════════════════════════════════════════════
 # KILL COUNTER TESTS
 # ══════════════════════════════════════════════════════════════════════════════
-'''
+
 class TestKillCounter:
     """Tests for Counter-based kill tracking."""
 
@@ -432,4 +432,3 @@ class TestStats:
         hero.upgrade_stat("intelligence", 5)
         hero.upgrade_stat("intelligence", 5)
         assert hero.stats["intelligence"] == 20
-'''
