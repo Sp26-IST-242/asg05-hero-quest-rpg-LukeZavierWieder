@@ -194,8 +194,12 @@ class Hero:
         Returns:
             True if stat exists and was upgraded; False if key not found.
         """
-        pass
-
+        if stat not in self.stats:
+            return False
+        else:
+            self.stats[stat] += amount
+            return True
+            
     def __repr__(self) -> str:
         return (f"Hero(name={self.name}"
                 f", class={self.hero_class}"
