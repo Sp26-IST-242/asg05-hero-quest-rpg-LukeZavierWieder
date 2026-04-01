@@ -171,7 +171,7 @@ class Hero:
         Record defeating an enemy.
         Counter accumulates each enemy type; no manual initialization needed.
         """
-        self.kill_counter[enemy_type] =+ 1
+        self.kill_counter[enemy_type] += 1
         self.combat_log.append(
             f"{self.name} defeated a {enemy_type}"
             f"(Total {enemy_type} kills: {self.kill_counter[enemy_type]})"
